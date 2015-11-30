@@ -1,0 +1,177 @@
+/* Default Style:
+	- dark gray header, footer, and sidebar
+	- positioning as shown in wireframe
+	- fixed positioning (does not change due to content or user change)
+	- responsive (so it works on multiple screen sizes)
+*/
+
+/* =====================================
+    Base Element Styles
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    padding-bottom: 80px;
+}
+
+img {
+    max-width: 100px;
+}
+
+/* =====================================
+    Base Layout Styles
+======================================== */
+
+/* ---- Layout Containers ---- */
+
+.wrap {
+    min-height: 100%;
+    margin-bottom: -80px;
+}
+
+.wrap:after {
+    content: "";
+    display: block;
+    height: 80px;
+}
+
+.name {
+    padding: 15px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-color: #e6e6e6;
+    font: #000000;
+    display: block;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+#categories {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 35px;
+}
+
+.category-container {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.sidebar {
+    color: white;
+    background-color: #333333;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+}
+
+.header {
+    color: white;
+    background-color: #333333;
+    width: 100%;
+    height: 87px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    color: white;
+    background-color: #333333;
+    width: 100%;
+    height: 87px;
+    display: block;
+}
+
+/* ---- Page Elements ---- */
+
+
+
+
+/* =====================================
+    Media Queries
+======================================== */
+
+@media (min-width: 769px) {
+    /*only things that are different for larger screens*/
+    .wrap {
+        min-height: calc(100vh - 89px);
+    }
+    
+    .content {
+        display: inline-block;
+        vertical-align: top;
+        width: 85%;
+    }
+    
+    .sidebar {
+        color: white;
+        float: left;
+        background-color: #333333;
+        display: inline-block;
+        width: 15%;
+        vertical-align: top;
+        height: 500px;
+        resize: horizontal;
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .footer {
+        position: relative;
+        color: white;
+        background-color: #333333;
+        width: 100%;
+        height: 80px;
+        margin-top: -80px;
+        padding: 15px;
+        clear: both;
+    }
+    
+    [draggable] {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        /* Required to make elements draggable in old WebKit */
+        -khtml-user-drag: element;
+        -webkit-user-drag: element;
+    }
+    
+    .category-container {
+        float: left;
+        margin-right: 5px;
+        text-align: center;
+        cursor: move;
+    }
+    
+}
+
+
+/*To be included in different style files...*/
+
+/* Various colored themes:
+	- same positioning as default
+	- different color schemes for backgrounds, text, and interactive material
+*/
+
+/* Possible to implement artistic themes and user-created themes */
